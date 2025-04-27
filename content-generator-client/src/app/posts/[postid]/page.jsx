@@ -15,7 +15,7 @@ function PostPage(props) {
     useEffect(() => {
         async function fetchPost() {
             try {
-                const data = await sendRequest(`${process.env.SERVER_URL}/posts/${postid}`);
+                const data = await sendRequest(`${process.env.NEXT_PUBLIC_SERVER_URL}/posts/${postid}`);
                 setPost(data);
             } catch (error) {
                 console.error(error);

@@ -11,7 +11,7 @@ export default function Auth({ formType }) {
         const isSignup = formType === "signup";
 
         try {
-            const res = await sendRequest(`${process.env.SERVER_URL}/auth/${isSignup ? "signup" : "login"}`, {
+            const res = await sendRequest(`${process.env.NEXT_PUBLIC_SERVER_URL}/auth/${isSignup ? "signup" : "login"}`, {
                 method: "POST",
                 body: JSON.stringify({ username, pwd: password }),
             });

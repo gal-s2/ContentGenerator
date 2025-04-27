@@ -15,7 +15,7 @@ function GeneratePostForm({ addPost }) {
 
     const handleGenerate = async () => {
         try {
-            const data = await sendRequest(`${process.env.SERVER_URL}/generate/`, {
+            const data = await sendRequest(`${process.env.NEXT_PUBLIC_SERVER_URL}/generate/`, {
                 method: "POST",
                 body: JSON.stringify({ topic, style }),
             });
@@ -29,7 +29,7 @@ function GeneratePostForm({ addPost }) {
 
     const handlePost = async () => {
         try {
-            const data = await sendRequest(`${process.env.SERVER_URL}/posts/save`, {
+            const data = await sendRequest(`${process.env.NEXT_PUBLIC_SERVER_URL}/posts/save`, {
                 method: "POST",
                 body: JSON.stringify({ title, content }),
             });
