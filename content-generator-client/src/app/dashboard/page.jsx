@@ -12,7 +12,7 @@ function DashboardPage() {
     useEffect(() => {
         async function fetchPosts() {
             try {
-                const res = await sendRequest(`http://localhost:8000/posts/user`, {
+                const res = await sendRequest(`${process.env.SERVER_URL}/posts/user`, {
                     method: "GET",
                 });
 
